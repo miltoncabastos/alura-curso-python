@@ -1,6 +1,7 @@
 from ExtratorArgumentosUrl import ExtratorArgumentoUrl
 
 url = "https://bytebank.com/cambio?moeDaorigem=real&moedadestino=dolar&valor=700"
+url2 = "https://bytebank.com/cambio?moeDaorigem=real&moedadestino=dolar&valor=700"
 # url = "https://bytebank.com/cambio?moedaorigem=moedadestino&moedadestino=dolar&valor=700"
 # url = 0
 extrator = ExtratorArgumentoUrl(url)
@@ -14,3 +15,5 @@ print(f'Moeda Destino: {extrator.extrairArgumentos(argumento)}')
 
 argumento = "valor"
 print(f'Valor: {extrator.extrairArgumentos(argumento)}')
+
+print(url == url2)

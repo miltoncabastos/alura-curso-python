@@ -5,7 +5,16 @@ class ExtratorArgumentoUrl:
         if self.urlEhValida(url):
             self.url = str(url).lower()
         else:
-            raise LookupError("Url inválida!")
+            raise AttributeError("Url inválida!")
+
+    def __len__(self):
+        return len(self.url)
+
+    def __str__(self):
+        return self.url
+
+    def __eq__(self, other):
+        return self.url == other.url
 
     @staticmethod
     def urlEhValida(url):
